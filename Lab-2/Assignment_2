@@ -1,0 +1,167 @@
+import profile from "./Profile.png";
+
+function App() {
+  document.title = "Poorvi Resume";
+
+  const cardStyle = {
+    background: "rgba(255,255,255,0.15)",
+    backdropFilter: "blur(12px)",
+    WebkitBackdropFilter: "blur(12px)",
+    borderRadius: "20px",
+    padding: "25px",
+    marginBottom: "25px",
+    color: "white",
+    boxShadow: "0 8px 25px rgba(0,0,0,0.25)",
+    border: "1px solid rgba(255,255,255,0.2)"
+  };
+
+  const badgeStyle = {
+    display: "inline-block",
+    background: "rgba(255,255,255,0.2)",
+    color: "white",
+    padding: "10px 18px",
+    margin: "8px",
+    borderRadius: "30px",
+    fontWeight: "bold",
+    fontSize: "15px"
+  };
+
+  return (
+    <div
+      style={{
+        minHeight: "100vh",
+        background:
+          "linear-gradient(135deg, #667eea 0%, #764ba2 50%, #6a11cb 100%)",
+        padding: "40px",
+        fontFamily: "Arial, sans-serif"
+      }}
+    >
+      <div
+        style={{
+          maxWidth: "900px",
+          margin: "auto"
+        }}
+      >
+
+        {/* Profile Card */}
+
+        <div
+          style={{
+            ...cardStyle,
+            textAlign: "center"
+          }}
+        >
+          <img
+            src={profile}
+            alt="Poorvi"
+            style={{
+              width: "180px",
+              height: "180px",
+              borderRadius: "50%",
+              objectFit: "cover",
+              border: "6px solid white",
+              boxShadow:
+                "0 0 25px rgba(255,255,255,0.6), 0 15px 35px rgba(0,0,0,0.4)",
+              marginBottom: "20px"
+            }}
+          />
+
+          <h1 style={{ marginBottom: "8px" }}>
+            Poorvi R
+          </h1>
+
+          <h3 style={{ color: "#FFE082" }}>
+            Full Stack Developer
+          </h3>
+
+          <p>🎓 BCA Student | RV University</p>
+
+          <p>📍 Bangalore, Karnataka</p>
+        </div>
+
+        {/* About */}
+
+        <div style={cardStyle}>
+          <h2>💜 About Me</h2>
+
+          <p style={{ lineHeight: "28px", fontSize: "16px" }}>
+            Passionate BCA student with a strong interest in Full Stack
+            Development, Artificial Intelligence, and Mobile Application
+            Development. I enjoy designing responsive websites, building
+            React applications, and continuously learning modern technologies.
+          </p>
+        </div>
+
+        {/* Skills */}
+
+        <div style={cardStyle}>
+          <h2>💻 Skills</h2>
+
+          <span style={badgeStyle}>HTML5</span>
+          <span style={badgeStyle}>CSS3</span>
+          <span style={badgeStyle}>JavaScript</span>
+          <span style={badgeStyle}>React</span>
+          <span style={badgeStyle}>Python</span>
+          <span style={badgeStyle}>Java</span>
+          <span style={badgeStyle}>C</span>
+          <span style={badgeStyle}>C++</span>
+          <span style={badgeStyle}>SQL</span>
+          <span style={badgeStyle}>Git</span>
+        </div>
+
+        {/* Education */}
+
+        <div style={cardStyle}>
+          <h2>🎓 Education</h2>
+
+          <h3>Bachelor of Computer Applications (BCA)</h3>
+
+          <p>RV University, Bangalore</p>
+
+          <p>Expected Graduation: 2028</p>
+        </div>
+
+        {/* Projects */}
+
+        <div style={cardStyle}>
+          <h2>🚀 Projects</h2>
+
+          <ul style={{ lineHeight: "32px" }}>
+            <li>Responsive Website using HTML, CSS & JavaScript</li>
+            <li>Personal Resume using React</li>
+            <li>AR Chemistry Learning Application</li>
+            <li>Travel Destination Mobile App</li>
+          </ul>
+        </div>
+
+        {/* Certifications */}
+
+        <div style={cardStyle}>
+          <h2>📜 Certifications</h2>
+
+          <ul style={{ lineHeight: "32px" }}>
+            <li>Applied Data Science</li>
+            <li>Data Visualization with Python</li>
+          </ul>
+        </div>
+
+        {/* Contact */}
+
+        <div style={cardStyle}>
+          <h2>📞 Contact</h2>
+
+          <p>📧 your-email@example.com</p>
+
+          <p>📱 +91 XXXXX XXXXX</p>
+
+          <p>📍 Bangalore, Karnataka</p>
+
+          <p>🔗 LinkedIn: linkedin.com/in/your-profile</p>
+        </div>
+
+      </div>
+    </div>
+  );
+}
+
+export default App;
